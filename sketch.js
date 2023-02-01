@@ -1,3 +1,7 @@
+// Todo está tan lleno de nada.
+// Jorge Forero.
+// 2023
+
 let input_text;
 let words;
 let newPhrases = [];
@@ -26,7 +30,7 @@ function setup() {
   clearButton.position(10,10);
 
 
-  input_text = createInput("Todo está lleno de nada");
+  input_text = createInput("Todo está tan lleno de nada");
   input_text.changed(processWords);
   input_text.size (200, 20);
   input_text.position(80,10 );
