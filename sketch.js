@@ -28,14 +28,19 @@ function setup() {
   clearButton.mousePressed(clearCanvas);
   clearButton.size (60, 25);
   clearButton.position(10,10);
+  
+  let startButton = createButton("Start");
+  startButton.mousePressed(startSpeech);
+  startButton.size (60, 25);
+  startButton.position(75,10 );
 
 
   input_text = createInput("Todo está tan lleno de nada");
   input_text.changed(processWords);
-  input_text.size (200, 20);
-  input_text.position(80,10 );
-  //let startButton = createButton("Start");
-  //startButton.mousePressed(startSpeech);
+  input_text.size (200, 19);
+  input_text.position(140,10 );
+  
+
   
   //let stopButton = createButton("Stop");
   //stopButton.mousePressed(stopSpeech);
