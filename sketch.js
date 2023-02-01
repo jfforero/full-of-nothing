@@ -4,8 +4,8 @@ let newPhrases = [];
 let phrases = [];
 let speech;
 let playing = false;
-let x_dim = windowWidth*0.75 ;
-let y_dim = windowHeight*0.75 ;
+let x_dim = windowWidth*0.15 ;
+let y_dim = windowHeight*0.15 ;
 
 function windowResized() {
   resizeCanvas(x_dim, y_dim);
