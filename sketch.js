@@ -4,11 +4,18 @@ let newPhrases = [];
 let phrases = [];
 let speech;
 let playing = false;
+let x_dim;
+let y_dim;
 
+function windowResized() {
+  x_dim = windowWidth*0.15 ;
+  y_dim = windowHeight*0.15
+  resizeCanvas(x_dim, y_dim);
+}
 
 function setup() {
-  let x_dim = windowWidth*0.15 ;
-  let y_dim = windowHeight*0.15 ;
+  x_dim = windowWidth*0.15 ;
+  y_dim = windowHeight*0.15
   createCanvas(x_dim, y_dim);
 
   input_text = createInput("Todo está lleno de nada");
