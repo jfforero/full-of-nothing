@@ -7,26 +7,34 @@ let playing = false;
 let x_dim;
 let y_dim;
 
+
 function windowResized() {
-  x_dim = windowWidth*0.15 ;
-  y_dim = windowHeight*0.15
-  resizeCanvas(x_dim, y_dim);
+  x_dim = windowWidth*0.75;
+  y_dim = windowHeight*0.75;
+  resizeCanvas(windowWidth, windowHeight);
 }
 
+
 function setup() {
-  x_dim = windowWidth*0.15 ;
-  y_dim = windowHeight*0.15
+  x_dim = windowWidth*0.75;
+  y_dim = windowHeight*0.75;
   createCanvas(x_dim, y_dim);
+  
+  let clearButton = createButton("Clear");
+  clearButton.mousePressed(clearCanvas);
+  clearButton.size (60, 25);
+  clearButton.position(10,10);
+
 
   input_text = createInput("Todo está lleno de nada");
   input_text.changed(processWords);
-
-  let startButton = createButton("Start");
-  startButton.mousePressed(startSpeech);
-  let stopButton = createButton("Stop");
-  stopButton.mousePressed(stopSpeech);
-  let clearButton = createButton("Clear");
-  clearButton.mousePressed(clearCanvas);
+  input_text.size (200, 20);
+  input_text.position(80,10 );
+  //let startButton = createButton("Start");
+  //startButton.mousePressed(startSpeech);
+  
+  //let stopButton = createButton("Stop");
+  //stopButton.mousePressed(stopSpeech);
 
   processWords();
   startSpeech();
@@ -149,6 +157,8 @@ function draw() {
     }, 5000);
   }
 }
+
+
 
 
 
