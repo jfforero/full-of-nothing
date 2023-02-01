@@ -6,11 +6,11 @@ let speech;
 let playing = false;
 
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+  resizeCanvas(windowWidth-100, windowHeight-100);
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth-100, windowHeight-100);
 
   input_text = createInput("Todo está lleno de nada");
   input_text.changed(processWords);
