@@ -6,12 +6,6 @@ let speech;
 let playing = false;
 
 
-function windowResized() {
-  let x_dim = windowWidth*0.15 ;
-  let y_dim = windowHeight*0.15 ;
-  resizeCanvas(x_dim, y_dim);
-}
-
 function setup() {
   let x_dim = windowWidth*0.15 ;
   let y_dim = windowHeight*0.15 ;
