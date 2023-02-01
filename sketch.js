@@ -5,6 +5,10 @@ let phrases = [];
 let speech;
 let playing = false;
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
